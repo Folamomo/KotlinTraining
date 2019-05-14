@@ -1,0 +1,17 @@
+package com.example.tasksmanager
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Toast
+
+class TaskActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_task)
+
+        intent?.extras?.getInt("extra.COUNT")?.let {
+            Toast.makeText(this, "W mainie kliknąłeś $it", Toast.LENGTH_SHORT).show()
+        }
+    }
+}

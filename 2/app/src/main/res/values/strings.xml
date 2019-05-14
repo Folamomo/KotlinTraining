@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TasksManager</string>
+    <string name="click">Naciśnij</string>
+    <string name="default_text">Domyślny Tekst</string>
+    <string name="clicks">Kliknięcia: </string>
+    <string name="task_name">Nazwa zadania</string>
+
 </resources>
