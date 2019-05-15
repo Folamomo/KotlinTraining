@@ -5,13 +5,82 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".TaskActivity">
+        tools:context=".view.activity.TaskActivity">
 
-    <TextView
-            android:layout_width="wrap_content"
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/task_save_btn">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_name"
+                    style="@style/TextViewTitle"
+                    />
+
+            <EditText
+                    android:id="@+id/task_name_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/empty_hint"
+                    style="@style/TextView"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_comment"
+                    style="@style/TextViewTitle"
+                    />
+
+            <EditText
+                    android:id="@+id/task_comment_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextView"
+                    android:hint="@string/empty_hint"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_date"
+                    style="@style/TextViewTitle"
+                    />
+
+            <TextView
+                    android:id="@+id/task_date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/empty_hint"
+                    style="@style/TextView"
+                    android:onClick="showDatePickerDialog"
+                    />
+
+            <CheckBox
+                    android:id="@+id/task_important_cb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_important"
+                    />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+            android:id="@+id/task_save_btn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/task_name"
-            android:layout_centerInParent="true"
-    />
+            android:text="@string/task_save"
+            android:layout_alignParentBottom="true"
+            android:onClick="saveTask"
+            android:background="@drawable/selector_rectangle_rounded_green"
+            android:layout_margin="@dimen/margin_normal"
+            />
 
 </RelativeLayout>

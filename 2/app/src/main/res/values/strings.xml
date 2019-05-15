@@ -4,5 +4,10 @@
     <string name="default_text">Domyślny Tekst</string>
     <string name="clicks">Kliknięcia: </string>
     <string name="task_name">Nazwa zadania</string>
-
+    <string name="empty_hint">Nic nie wpisane</string>
+    <string name="task_comment">Komentarz</string>
+    <string name="task_date">Data</string>
+    <string name="task_important">Ważne</string>
+    <string name="task_save">Zapisz</string>
+    <string name="saved">Zapisano</string>
 </resources>
